@@ -621,8 +621,7 @@ img {
   border-radius: 4px;
   border: none;
   padding: 8px 24px;
-  margin-top: 16px;
-  width: 165px;
+    min-width: 165px;
   height: 40px;
   background-color: #4d5ae5;
   font-family: "Roboto", sans-serif;
@@ -636,11 +635,10 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
+  }
 
 .subscribe-input-email {
-  margin-top: 16px;
-  border: 1px solid #fff;
+    border: 1px solid #fff;
   background-color: transparent;
   border-radius: 4px;
   width: 264px;
@@ -691,12 +689,12 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   background-color: #fcfcfc;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: transorm 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
   padding: 72px 24px 24px 24px;
 }
 
@@ -713,6 +711,7 @@ img {
   align-items: center;
   justify-content: center;
   fill: #e7e9fc;
+  background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -734,7 +733,7 @@ img {
 .exit-button-svg:hover,
 .exit-button-svg:focus,
 .exit-button-svg:active {
-  fill: #fff;
+  fill: #ffffff;
 }
 
 /* Inputs */
@@ -786,7 +785,7 @@ img {
 .modal-icon:hover,
 .modal-icon:focus,
 .modal-icon:active {
-  fill: #4d5ae5;
+  fill: #4D5AE5;
 }
 
 .modal-label {
@@ -816,6 +815,7 @@ img {
   background-color: transparent;
   padding: 8px 16px;
   resize: none;
+  outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -851,16 +851,13 @@ img {
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-accept:checked {
-  background-color: #404bbf;
-}
-
-.modal-accept:checked > span {
+.checkbox-input:checked .modal-accept {
   border: none;
   fill: #f4f4fd;
+  background-color: #404bbf;
 }
 
 .modal-link {
