@@ -857,12 +857,6 @@ img {
   background-color: #404bbf;
 }
 
-
-
-.checkbox-input:checked + label > span > svg {
-  fill: #ffffff;
-}
-
 .modal-link {
   text-decoration: underline;
   color: #4d5ae5;
